@@ -34,9 +34,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Strike.Common.Objects, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Strike.Common.Objects.1.0.0\lib\Strike.Common.Objects.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -55,13 +52,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Strike.Common.Objects\Strike.Common.Objects.csproj">
+      <Project>{a3dd4fe9-4074-48ad-a363-1a0004dd2f41}</Project>
+      <Name>Strike.Common.Objects</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Strike.Common.Logging\Strike.Common.Logging.csproj">
       <Project>{19E32F9B-7D8A-4B06-B866-D139CE642FDC}</Project>
       <Name>Strike.Common.Logging</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
