@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E897A7EA-4DC3-4D40-A814-1D3E489CC9A2}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Sample</RootNamespace>
+    <AssemblyName>Sample</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ninject, Version=3.3.4.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.3.4\lib\net45\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Infrastructure\NamedBindings.Accounts.cs" />
+    <Compile Include="Infrastructure\NamedBindings.Balances.cs" />
+    <Compile Include="Infrastructure\SampleBindingsModule.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Strike.Common.Commerce\Strike.Common.Accounts.csproj">
+      <Project>{9f10f5af-efcb-49d4-b66b-9b4c8ce7d47c}</Project>
+      <Name>Strike.Common.Accounts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Strike.Common.Logging\Strike.Common.Logging.Console.Ninject\Strike.Common.Logging.Console.Ninject.csproj">
+      <Project>{312c2b7c-b57b-4637-8a7d-32a3cbd5cd16}</Project>
+      <Name>Strike.Common.Logging.Console.Ninject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Strike.Common.Logging\Strike.Common.Logging.Console\Strike.Common.Logging.Console.csproj">
+      <Project>{41d4aabe-0410-4f19-8647-11e1e8e2395c}</Project>
+      <Name>Strike.Common.Logging.Console</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Strike.Common.Logging\Strike.Common.Logging\Strike.Common.Logging.csproj">
+      <Project>{19e32f9b-7d8a-4b06-b866-d139ce642fdc}</Project>
+      <Name>Strike.Common.Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Strike.Common.Objects\Strike.Common.Objects.csproj">
+      <Project>{a3dd4fe9-4074-48ad-a363-1a0004dd2f41}</Project>
+      <Name>Strike.Common.Objects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Strike.Members.Loyalty\Strike.PowerPlay.Loyalty.csproj">
+      <Project>{88C4F746-C483-4BFB-89BB-ACCC4E1B26C5}</Project>
+      <Name>Strike.PowerPlay.Loyalty</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

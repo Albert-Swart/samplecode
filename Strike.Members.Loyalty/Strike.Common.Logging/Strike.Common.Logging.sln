@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Strike.Common.Logging.Console", "Strike.Common.Logging.Console\Strike.Common.Logging.Console.csproj", "{41D4AABE-0410-4F19-8647-11E1E8E2395C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Strike.Common.Logging", "Strike.Common.Logging\Strike.Common.Logging.csproj", "{19E32F9B-7D8A-4B06-B866-D139CE642FDC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Strike.Common.Logging.Console.Test", "Strike.Common.Logging.Console.Test\Strike.Common.Logging.Console.Test.csproj", "{4D933521-9F40-4FB7-824D-8B1FE5DC8554}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Strike.Common.Logging.Console.Ninject", "Strike.Common.Logging.Console.Ninject\Strike.Common.Logging.Console.Ninject.csproj", "{312C2B7C-B57B-4637-8A7D-32A3CBD5CD16}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{41D4AABE-0410-4F19-8647-11E1E8E2395C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41D4AABE-0410-4F19-8647-11E1E8E2395C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41D4AABE-0410-4F19-8647-11E1E8E2395C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41D4AABE-0410-4F19-8647-11E1E8E2395C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19E32F9B-7D8A-4B06-B866-D139CE642FDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19E32F9B-7D8A-4B06-B866-D139CE642FDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19E32F9B-7D8A-4B06-B866-D139CE642FDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19E32F9B-7D8A-4B06-B866-D139CE642FDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D933521-9F40-4FB7-824D-8B1FE5DC8554}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D933521-9F40-4FB7-824D-8B1FE5DC8554}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D933521-9F40-4FB7-824D-8B1FE5DC8554}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D933521-9F40-4FB7-824D-8B1FE5DC8554}.Release|Any CPU.Build.0 = Release|Any CPU
+		{312C2B7C-B57B-4637-8A7D-32A3CBD5CD16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{312C2B7C-B57B-4637-8A7D-32A3CBD5CD16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{312C2B7C-B57B-4637-8A7D-32A3CBD5CD16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{312C2B7C-B57B-4637-8A7D-32A3CBD5CD16}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {196FEFB8-669E-44D0-8684-F46D930F2CBF}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://strikemediadevelopment.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Strike.Common.Logging.Console\\Strike.Common.Logging.Console.csproj
+		SccProjectName1 = Strike.Common.Logging.Console
+		SccLocalPath1 = Strike.Common.Logging.Console
+		SccProjectUniqueName2 = Strike.Common.Logging\\Strike.Common.Logging.csproj
+		SccProjectName2 = Strike.Common.Logging
+		SccLocalPath2 = Strike.Common.Logging
+		SccProjectUniqueName3 = Strike.Common.Logging.Console.Test\\Strike.Common.Logging.Console.Test.csproj
+		SccProjectName3 = Strike.Common.Logging.Console.Test
+		SccLocalPath3 = Strike.Common.Logging.Console.Test
+		SccProjectUniqueName4 = Strike.Common.Logging.Console.Ninject\\Strike.Common.Logging.Console.Ninject.csproj
+		SccProjectName4 = Strike.Common.Logging.Console.Ninject
+		SccLocalPath4 = Strike.Common.Logging.Console.Ninject
+	EndGlobalSection
+EndGlobal

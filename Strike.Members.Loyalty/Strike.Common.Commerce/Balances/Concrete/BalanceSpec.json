@@ -1,0 +1,16 @@
+{
+  "AccountBehaviour": {
+    "CreatedButInactiveAccount": {
+      "Allow": true
+    },
+    "CreatedButActiveAccount": {
+      "Allow": true
+    },
+    "ActiveAccount": {
+      "Allow": true
+    },
+    "InactiveAccount": {
+      "Allow": true
+    }
+  }
+}

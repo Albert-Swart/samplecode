@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{88C4F746-C483-4BFB-89BB-ACCC4E1B26C5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Strike.Members.Loyalty</RootNamespace>
+    <AssemblyName>Strike.Members.Loyalty</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Accounts\Abstract\IExpectInitialLoyaltyPointBalanceSpecification.cs" />
+    <Compile Include="Accounts\Abstract\IExpectLoyaltyPointAccountIndentitySpecification.cs" />
+    <Compile Include="Accounts\Abstract\ILoyaltyPointAccount.cs" />
+    <Compile Include="Accounts\Abstract\ILoyaltyPointAccountActivationMethod.cs" />
+    <Compile Include="Accounts\Abstract\ILoyaltyPointAccountDeactivationMethod.cs" />
+    <Compile Include="Accounts\Abstract\ILoyaltyPointAccountReactivationMethod.cs" />
+    <Compile Include="Accounts\Concrete\CreateLoyaltyPointAccountMethodStub.cs" />
+    <Compile Include="Accounts\Abstract\ICreateLoyaltyPointAccountMethod.cs" />
+    <Compile Include="Accounts\Abstract\IRejectionReason.cs" />
+    <Compile Include="Accounts\Abstract\IRejectorRule.cs" />
+    <Compile Include="Accounts\Abstract\IRenderMethod.cs" />
+    <Compile Include="Accounts\Abstract\IRetrieveLoyaltyPointAccountsMethod.cs" />
+    <Compile Include="Accounts\Abstract\IExpectMsisdn.cs" />
+    <Compile Include="Accounts\Concrete\LogFriendlyLoyaltyPointAccountIdentityRenderMethod.cs" />
+    <Compile Include="Accounts\Concrete\LoyaltyPointAccount.AccountState.cs" />
+    <Compile Include="Accounts\Concrete\LoyaltyPointAccount.ActiveState.cs" />
+    <Compile Include="Accounts\Concrete\LoyaltyPointAccount.ActiveStateLogging.cs" />
+    <Compile Include="Accounts\Concrete\LoyaltyPointAccount.CreatedState.cs" />
+    <Compile Include="Accounts\Concrete\LoyaltyPointAccount.CreatedStateLogging.cs" />
+    <Compile Include="Accounts\Concrete\LoyaltyPointAccount.IAccountState.cs" />
+    <Compile Include="Accounts\Concrete\LoyaltyPointAccount.InactiveState.cs" />
+    <Compile Include="Accounts\Concrete\LoyaltyPointAccount.InactiveStateLogging.cs" />
+    <Compile Include="Accounts\Concrete\LoyaltyPointAccountActivationMethodStub.cs" />
+    <Compile Include="Accounts\Concrete\LoyaltyPointAccountDeactivationMethodStub.cs" />
+    <Compile Include="Accounts\Concrete\LoyaltyPointAccountIdentity.cs" />
+    <Compile Include="Accounts\Concrete\LoyaltyPointAccountIdentitySpecification.cs" />
+    <Compile Include="Accounts\Concrete\LoyaltyPointAccountReactivationMethodStub.cs" />
+    <Compile Include="Accounts\Concrete\LoyaltyPointAccountSpecification.cs" />
+    <Compile Include="Accounts\Concrete\LoyaltyPointAccountSpecificationBuilder.cs" />
+    <Compile Include="Accounts\Concrete\NewLoyaltyAccountRequestRejectionContext.cs" />
+    <Compile Include="Accounts\Abstract\RejectorRule.cs" />
+    <Compile Include="Accounts\Concrete\RetrieveExistingLoyaltyPointAccountsMethodStub.cs" />
+    <Compile Include="Accounts\Concrete\UsersMayOnlyHaveOneLoyaltyPointAccount.cs" />
+    <Compile Include="Balances\Abstract\ILoyaltyPointAccountBalanceRetrievalMethod.cs" />
+    <Compile Include="Balances\Abstract\ILoyaltyPointAccountDepositMethod.cs" />
+    <Compile Include="Balances\Concrete\AssumeSingleAccountDepositMethodForDemo.cs" />
+    <Compile Include="Balances\Concrete\DemoAccountBalanceRetrievalMethod.cs" />
+    <Compile Include="Balances\Concrete\IgnoreAccountBalanceRetrieval.cs" />
+    <Compile Include="Balances\Concrete\IgnoreAccountDepositMethod.cs" />
+    <Compile Include="Accounts\Concrete\LoyaltyPointAccount.cs" />
+    <Compile Include="Accounts\Concrete\LoyaltyPointAccountFactory.cs" />
+    <Compile Include="Accounts\Concrete\LoyaltyPointAccountIdentityFactory.cs" />
+    <Compile Include="Accounts\Concrete\LoyaltyPointAccountIdentitySpecificationBuilder.cs" />
+    <Compile Include="Balances\Concrete\LoyaltyPointAccountBalanceRetrievalMethodLogging.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Strike.Common.Commerce\Strike.Common.Accounts.csproj">
+      <Project>{9F10F5AF-EFCB-49D4-B66B-9B4C8CE7D47C}</Project>
+      <Name>Strike.Common.Accounts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Strike.Common.Logging\Strike.Common.Logging\Strike.Common.Logging.csproj">
+      <Project>{19e32f9b-7d8a-4b06-b866-d139ce642fdc}</Project>
+      <Name>Strike.Common.Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Strike.Common.Objects\Strike.Common.Objects.csproj">
+      <Project>{a3dd4fe9-4074-48ad-a363-1a0004dd2f41}</Project>
+      <Name>Strike.Common.Objects</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
